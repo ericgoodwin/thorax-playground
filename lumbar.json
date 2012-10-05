@@ -1,0 +1,125 @@
+{
+  "application": {
+    "name": "Application",
+    "module": "base"
+  },
+  "modules": {
+    "base": {
+      "scripts": [
+        {
+          "src": "js/lib/jquery.js",
+          "global": true
+        },
+        {
+          "src": "js/lib/underscore.js",
+          "global": true
+        },
+        {
+          "src": "js/lib/backbone.js",
+          "global": true
+        },
+        {
+          "src": "js/lib/handlebars.js",
+          "global": true
+        },
+        {
+          "src": "js/lib/thorax.js",
+          "global": true
+        },
+        {
+          "src": "js/lib/script.js",
+          "global": true
+        },
+        {
+          "src": "js/lib/lumbar-loader.js"
+        },
+        {
+          "src": "js/lib/lumbar-loader-events.js"
+        },
+        {
+          "src": "js/lib/lumbar-loader-standard.js"
+        },
+        {
+          "src": "js/lib/lumbar-loader-backbone.js"
+        },
+        {
+          "src": "js/init.js"
+        },
+        {
+          "src": "js/view-controller.js"
+        },
+        {
+          "src": "js/model.js"
+        },
+        {
+          "src": "js/collection.js"
+        },
+        {
+          "src": "js/view.js"
+        },
+        {
+          "module-map": true
+        },
+        {
+          "src": "js/lib/bootstrap.js"
+        }
+      ],
+      "styles": [
+        {
+          "src": "styles/base.styl"
+        },
+        {
+          "src": "styles/bootstrap.css"
+        }
+      ],
+      "static": [
+        {
+          "src": "static/index.html",
+          "dest": "index.html"
+        },
+        {
+          "src": "static/img",
+          "dest": "img"
+        }
+      ]
+    },
+    "hello-world": {
+      "routes": {
+        "": "index"
+      },
+      "scripts": [
+        {
+          "src": "js/view-controllers/hello-world.coffee"
+        },
+        {
+          "src": "js/views/hello-world/index.coffee"
+        } 
+      ],
+      "styles": [
+        {
+          "src": "styles/hello-world.styl"
+        }
+      ]
+    }
+  },
+  "templates": {
+    "template": "Application.templates['{{{withoutExtension name}}}'] = '{{{data}}}';",
+    "js/init.js": [
+      "templates/application.handlebars"
+    ],
+    "js/views/hello-world/index.coffee": [
+      "templates/hello-world/index.handlebars"
+    ]
+  },
+  "styles": {
+    "pixelDensity": {
+      "web": [
+        1,
+        2
+      ]
+    },
+    "includes": [
+      "nib"
+    ]
+  }
+}
