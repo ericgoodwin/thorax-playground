@@ -62,6 +62,9 @@
         },
         {
           "src": "js/lib/bootstrap.js"
+        },
+        {
+          "src": "js/view-helpers.js"
         }
       ],
       "styles": [
@@ -83,21 +86,35 @@
         }
       ]
     },
-    "hello-world": {
+    "products": {
       "routes": {
-        "": "index"
+        "": "list",
+        "products": "list",
+        "products/:cid": "item"
       },
       "scripts": [
         {
-          "src": "js/view-controllers/hello-world.coffee"
+          "src": "js/view-controllers/dashboard.js"
         },
         {
-          "src": "js/views/hello-world/index.coffee"
-        } 
+          "src": "js/view-controllers/products.js"
+        },
+        {
+          "src": "js/views/products/product-list.js"
+        },
+        {
+          "src": "js/views/products/product-item.js"
+        },
+        {
+          "src": "js/models/product.js"
+        },
+        {
+          "src": "js/collections/products.js"
+        }
       ],
       "styles": [
         {
-          "src": "styles/hello-world.styl"
+          "src": "styles/application.styl"
         }
       ]
     }
@@ -107,8 +124,15 @@
     "js/init.js": [
       "templates/application.handlebars"
     ],
-    "js/views/hello-world/index.coffee": [
-      "templates/hello-world/index.handlebars"
+    "js/views/dashboard/index.js": [
+      "templates/dashboard/index.handlebars"
+    ],
+    "js/views/products/product-list.js": [
+      "templates/products/product-list.handlebars",
+      "templates/products/product-list-item.handlebars"
+    ],
+    "js/views/products/product-item.js": [
+      "templates/products/product-item.handlebars"
     ]
   },
   "styles": {

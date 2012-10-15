@@ -31,7 +31,8 @@ $(function() {
     pushState: false,
     root: '/',
     silent: true
-  });  Application.render();
+  });  
+  Application.render();
   $('body').append(Application.el);
   //mimic when a ViewController will trigger the "ready"
   //event on a view, since this is the top level object
