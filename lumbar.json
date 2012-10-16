@@ -94,16 +94,22 @@
       },
       "scripts": [
         {
-          "src": "js/view-controllers/dashboard.js"
+          "src": "js/view-controllers/controller.js"
         },
         {
-          "src": "js/view-controllers/products.js"
+          "src": "js/views/header.js"
+        },
+        {
+          "src": "js/views/footer.js"
         },
         {
           "src": "js/views/products/product-list.js"
         },
         {
           "src": "js/views/products/product-item.js"
+        },
+        {
+          "src": "js/views/products/product-details.js"
         },
         {
           "src": "js/models/product.js"
@@ -124,15 +130,21 @@
     "js/init.js": [
       "templates/application.handlebars"
     ],
-    "js/views/dashboard/index.js": [
-      "templates/dashboard/index.handlebars"
-    ],
     "js/views/products/product-list.js": [
       "templates/products/product-list.handlebars",
       "templates/products/product-list-item.handlebars"
     ],
     "js/views/products/product-item.js": [
       "templates/products/product-item.handlebars"
+    ],
+    "js/views/products/product-details.js": [
+      "templates/products/product-details.handlebars"
+    ],
+    "js/views/header.js": [
+      "templates/header.handlebars"
+    ],
+    "js/views/footer.js": [
+      "templates/footer.handlebars"
     ]
   },
   "styles": {

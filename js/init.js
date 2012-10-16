@@ -31,12 +31,18 @@ $(function() {
     pushState: false,
     root: '/',
     silent: true
-  });  
+  }); 
   Application.render();
-  $('body').append(Application.el);
+  $('#content').append(Application.el);  
   //mimic when a ViewController will trigger the "ready"
   //event on a view, since this is the top level object
   //it needs to be triggered manually
   Application.trigger('ready');
   Backbone.history.loadUrl();
+
+  Application.header = new Application.Views['header']
+  Application.header.render()
+
+  Application.footer = new Application.Views['footer']
+  Application.footer.render()
 });
