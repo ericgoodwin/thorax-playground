@@ -65,6 +65,18 @@
         },
         {
           "src": "js/view-helpers.js"
+        },
+        {
+          "src": "js/views/header.js"
+        },
+        {
+          "src": "js/views/footer.js"
+        },
+        {
+          "src": "js/models/product.js"
+        },
+        {
+          "src": "js/collections/cart.js"
         }
       ],
       "styles": [
@@ -97,12 +109,6 @@
           "src": "js/view-controllers/controller.js"
         },
         {
-          "src": "js/views/header.js"
-        },
-        {
-          "src": "js/views/footer.js"
-        },
-        {
           "src": "js/views/products/product-list.js"
         },
         {
@@ -110,9 +116,6 @@
         },
         {
           "src": "js/views/products/product-details.js"
-        },
-        {
-          "src": "js/models/product.js"
         },
         {
           "src": "js/collections/products.js"

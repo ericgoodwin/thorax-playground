@@ -40,6 +40,8 @@ $(function() {
   Application.trigger('ready');
   Backbone.history.loadUrl();
 
+  Application.cart = new Application.Collections.Cart
+
   Application.header = new Application.Views['header']
   Application.header.render()
 

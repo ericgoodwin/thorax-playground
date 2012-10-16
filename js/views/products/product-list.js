@@ -1,25 +1,38 @@
 Application.View.extend({
   name: 'products/product-list',
+  // products: Store,
 
   events: {
     collection: {
       change: "renderCollection"
-    },
-    "click a.more": function(evt){
-      var el = $(evt.currentTarget).closest('[data-model-cid]')
-      var cid = el.data('model-cid')
-      this.details(el, cid)
-      evt.preventDefault()
     }
   },
 
-  details: function(el, cid){
-    var detail = $(el).find('.details')
-    var view = new Application.Views['products/product-details']
-    view.context = function(){ return Store.getByCid(cid).attributes }
-    view.render()
-    detail.html(view.el)
-    detail.show()
+  buy: function(event){
+    var $t      = $(event.target)
+    var model   = $t.model()
+
+    // Add to your cart
+    Application.cart.add(model)
+
+    console.log("BUY IT NOW: "+model.get('name')+' to ')
+    console.log(Application.cart)
+  },
+
+  details: function(event){
+    var $t      = $(event.target)
+    var model   = $t.model()
+    var element = $t.closest('li')
+    var dEl     = element.find(".details")
+    if(dEl.html()=="")
+    {
+      var view = new Application.Views['products/product-details']({
+      el: dEl
+      })
+      view.setModel(model)
+      view.render()
+    }
+    dEl.toggle()
   },
 
   itemContext: function(item){

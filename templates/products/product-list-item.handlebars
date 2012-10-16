@@ -1,8 +1,8 @@
 <li>
   <p>
-    {{#link path}}{{name}}{{/link}} - ${{price}}
+    {{#link path}}{{name}}{{/link}} - <small>{{#button "details" tag="a"}}more info{{/button}}</small>
     <br />
-    <small><a href="#" class="more">more info</a></small>
-    <div class='details'></div>
+    {{#button "buy"}}Buy ${{price}}{{/button}}
+    <div class='details' style='display:none'></div>
   </p>
 </li>
