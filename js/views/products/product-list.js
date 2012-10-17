@@ -1,22 +1,26 @@
 Application.View.extend({
   name: 'products/product-list',
-  // products: Store,
 
-  events: {
-    collection: {
-      change: "renderCollection"
-    }
+  initialize: function()
+  {
+    // this.products.on('change', this.render, this)
+    // this.cart.on('change', this.render, this)
   },
 
-  buy: function(event){
-    var $t      = $(event.target)
-    var model   = $t.model()
+  //events: {
+  //  all: function(arg){ console.log(arg) }
+  //},
 
-    // Add to your cart
-    Application.cart.add(model)
+  addToCart: function(event){
+    var model = $(event.target).model()
 
-    console.log("BUY IT NOW: "+model.get('name')+' to ')
-    console.log(Application.cart)
+    this.cart.add(model)
+  },
+
+  removeFromCart: function(){
+    var model = $(event.target).model()
+
+    this.cart.remove(model)
   },
 
   details: function(event){
@@ -36,7 +40,11 @@ Application.View.extend({
   },
 
   itemContext: function(item){
-    return _.extend({path: "products/"+item.cid }, item.attributes)
+    return _.extend({}, {
+      path:   "products/"+item.cid,
+      inCart: item.isInCart(),
+      state:  item.get('state')
+    }, item.attributes)
   }
 
 })

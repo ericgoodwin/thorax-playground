@@ -33,7 +33,8 @@ var controller = new Application.ViewController({
       ]) 
     }
     var view = new Application.Views['products/product-list']({
-      products: Store
+      products: Store,
+      cart: Application.cart
     })
     this.setView(view)
   },

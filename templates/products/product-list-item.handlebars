@@ -2,7 +2,10 @@
   <p>
     {{#link path}}{{name}}{{/link}} - <small>{{#button "details" tag="a"}}more info{{/button}}</small>
     <br />
-    {{#button "buy"}}Buy ${{price}}{{/button}}
+    {{#if inCart}}
+    {{#button "removeFromCart" tag="a"}}remove from cart{{/button}}
+    {{/if}}
+    {{#button "addToCart"}}Buy ${{price}}{{/button}}
     <div class='details' style='display:none'></div>
   </p>
 </li>
