@@ -3,9 +3,14 @@
     {{#link path}}{{name}}{{/link}} - <small>{{#button "details" tag="a"}}more info{{/button}}</small>
     <br />
     {{#if inCart}}
-    {{#button "removeFromCart" tag="a"}}remove from cart{{/button}}
+    <small>
+      {{#button "removeFromCart" tag="a"}}remove from cart{{/button}}
+    </small>
     {{/if}}
-    {{#button "addToCart"}}Buy ${{price}}{{/button}}
+    {{#button "addToCart"}}
+      Buy It
+    {{/button}}
+    {{money price}}
     <div class='details' style='display:none'></div>
   </p>
 </li>

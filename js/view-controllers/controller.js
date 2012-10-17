@@ -10,7 +10,8 @@ var controller = new Application.ViewController({
 
   cart: function(){
     var view = new Application.Views['products/product-list']({
-      products: Application.cart
+      products: Application.cart,
+      cart: Application.cart
     })
     this.setView(view)
   },
