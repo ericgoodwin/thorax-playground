@@ -40,11 +40,15 @@ $(function() {
   Application.trigger('ready');
   Backbone.history.loadUrl();
 
-  Application.cart = new Application.Collections.Cart
+  Application.cart = new Application.Collections.Cart;
 
-  Application.header = new Application.Views['header']
+  Application.header = new Application.Views['header']({
+    cart: Application.cart
+  })
   Application.header.render()
 
   Application.footer = new Application.Views['footer']
   Application.footer.render()
+
+  
 });
