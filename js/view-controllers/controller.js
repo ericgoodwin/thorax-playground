@@ -39,8 +39,9 @@ var controller = new Application.ViewController({
   },
 
   item: function(cid){
-    var view = new Application.Views['products/product-item']
-    view.setModel(Store.getByCid(cid))
+    var view = new Application.Views['products/product-item']({
+      model: Store.getByCid(cid)
+    })
     this.setView(view)
   }
 
