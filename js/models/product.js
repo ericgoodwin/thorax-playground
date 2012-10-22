@@ -1,5 +1,5 @@
  Application.Model.Product = Application.Model.extend({
-  isInCart: function(){
+  inCart: function(){
     return this.get('state') == 'cart'
   }
 })

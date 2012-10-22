@@ -1,0 +1,18 @@
+<div>
+{{#empty cart}}
+  Nothing in the cart so far
+{{else}}
+  {{collection cart tag="ul"}}
+{{/empty}}
+</div>
+
+<hr />
+
+<h5>Subtotal</h5>
+{{money subtotal}}
+
+<h5>HST</h5>
+{{money taxes}}
+
+<h5>Total</h5>
+{{money total}}

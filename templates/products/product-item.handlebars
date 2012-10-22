@@ -1,1 +1,6 @@
 <h5>{{name}} - ${{price}}</h5>
+{{#if inCart}}
+<small>
+  {{#button "removeFromCart" tag="a"}}remove from cart{{/button}}
+</small>
+{{/if}}

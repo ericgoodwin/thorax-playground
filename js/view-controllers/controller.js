@@ -9,8 +9,7 @@ var controller = new Application.ViewController({
   routes: module.routes,
 
   cart: function(){
-    var view = new Application.Views['products/product-list']({
-      products: Application.cart,
+    var view = new Application.Views['cart/cart-list']({
       cart: Application.cart
     })
     this.setView(view)
@@ -42,7 +41,8 @@ var controller = new Application.ViewController({
 
   item: function(cid){
     var view = new Application.Views['products/product-item']({
-      model: Store.getByCid(cid)
+      model: Store.getByCid(cid),
+      cart: Application.cart
     })
     this.setView(view)
   }

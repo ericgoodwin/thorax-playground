@@ -1,27 +1,11 @@
-Application.View.extend({
+Application.View.extend(_.extend({
   name: 'products/product-list',
 
-  initialize: function()
-  {
-    // this.products.on('change', this.render, this)
-    // this.cart.on('change', this.render, this)
-  },
+  initialize: function(){},
 
   //events: {
   //  all: function(arg){ console.log(arg) }
   //},
-
-  addToCart: function(event){
-    var model = $(event.target).model()
-
-    this.cart.add(model)
-  },
-
-  removeFromCart: function(){
-    var model = $(event.target).model()
-
-    this.cart.remove(model)
-  },
 
   details: function(event){
     var $t      = $(event.target)
@@ -42,9 +26,9 @@ Application.View.extend({
   itemContext: function(item){
     return _.extend({}, {
       path:   "products/"+item.cid,
-      inCart: item.isInCart(),
+      inCart: item.inCart(),
       state:  item.get('state')
     }, item.attributes)
   }
 
-})
+}, cartMethods))

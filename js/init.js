@@ -19,6 +19,25 @@ Application.Routers = Thorax.Routers;
 //to the application object
 Thorax.setRootObject(Application);
 
+localStorage.setItem("products", 
+[
+  { name: 'Bear Skin Rug',
+    price: 50000,
+    description: "description here",
+    state: "store" 
+  },
+  { name: 'Wolf Paw Toaster',
+    price: 6000,
+    description: "description here",
+    state: "store"  
+  },
+  { name: 'Bob Cat Slippers',
+    price: 8500,
+    description: "description here",
+    state: "store"  
+  }
+])
+
 $(function() {
   //Application and other templates included by the base
   //Application may want to use the link and url helpers

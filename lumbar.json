@@ -43,6 +43,9 @@
           "src": "js/lib/lumbar-loader-backbone.js"
         },
         {
+          "src": "js/lib/jquery.cookie.js"
+        },
+        {
           "src": "js/init.js"
         },
         {
@@ -56,6 +59,9 @@
         },
         {
           "src": "js/view.js"
+        },
+        {
+          "src": "js/views/mixins/cart.js"
         },
         {
           "module-map": true
@@ -120,6 +126,9 @@
         },
         {
           "src": "js/collections/products.js"
+        },
+        {
+          "src": "js/views/cart/cart-list.js"
         }
       ],
       "styles": [
@@ -149,6 +158,10 @@
     ],
     "js/views/footer.js": [
       "templates/footer.handlebars"
+    ],
+    "js/views/cart/cart-list.js": [
+      "templates/cart/cart-list.handlebars",
+      "templates/cart/cart-list-item.handlebars"
     ]
   },
   "styles": {

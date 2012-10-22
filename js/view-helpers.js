@@ -9,9 +9,7 @@ Handlebars.registerHelper('dasherize', function(str){
   return String.prototype.dasherize.call(str)
 })
 
-Handlebars.registerHelper('money', function(cents){
-  if(!cents){ return null }
- 
+Handlebars.registerHelper('money', function(cents){ 
   var options = { sign: true }
 
   var sign = ""
